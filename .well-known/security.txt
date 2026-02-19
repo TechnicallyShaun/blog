@@ -1,0 +1,8 @@
+---
+permalink: /.well-known/security.txt
+layout: null
+---
+Contact: mailto:contact@technicallyshaun.com
+Expires: 2027-02-19T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://technicallyshaun.com/.well-known/security.txt
