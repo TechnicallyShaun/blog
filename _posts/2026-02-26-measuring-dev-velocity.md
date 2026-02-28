@@ -89,12 +89,12 @@ Here's every fortnightly sprint since joining the company in March 2023. Story p
         legend: { labels: { color: '#ccc' } },
         annotation: {
           annotations: {
-            summer23: { type: 'box', xMin: 9, xMax: 11, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas23: { type: 'box', xMin: 20, xMax: 21, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
-            summer24: { type: 'box', xMin: 35, xMax: 37, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas24: { type: 'box', xMin: 46, xMax: 47, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
-            summer25: { type: 'box', xMin: 61, xMax: 63, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas25: { type: 'box', xMin: 72, xMax: 73, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }}
+            summer23: { type: 'box', xMin: 9, xMax: 10, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
+            xmas23: { type: 'box', xMin: 19, xMax: 21, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
+            summer24: { type: 'box', xMin: 35, xMax: 36, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
+            xmas24: { type: 'box', xMin: 45, xMax: 47, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
+            summer25: { type: 'box', xMin: 61, xMax: 62, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
+            xmas25: { type: 'box', xMin: 71, xMax: 73, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }}
           }
         }
       }
@@ -141,8 +141,8 @@ Now let's zoom into 2025 onwards and mark when AI entered the picture:
         legend: { labels: { color: '#ccc' } },
         annotation: {
           annotations: {
-            summer25: { type: 'box', xMin: 12, xMax: 14, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas25: { type: 'box', xMin: 23, xMax: 24, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
+            summer25: { type: 'box', xMin: 12, xMax: 13, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
+            xmas25: { type: 'box', xMin: 22, xMax: 24, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
             aiExplore: { type: 'line', xMin: 15, xMax: 15, borderColor: 'rgba(255,180,50,0.6)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Experimenting', color: '#ffb432', backgroundColor: 'transparent', position: 'start', font: {size: 10} }},
             aiSerious: { type: 'line', xMin: 24, xMax: 24, borderColor: 'rgba(255,80,80,0.7)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Serious', color: '#ff5050', backgroundColor: 'transparent', position: 'start' }}
           }
