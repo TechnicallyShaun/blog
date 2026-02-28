@@ -474,6 +474,14 @@ blockquote {
   transition: padding 0.2s ease-out;
 }
 
+.post-header-wrapper.shrunk {
+  padding: 1.5rem 0 1rem;
+}
+
+.post-header-wrapper.shrunk .post-title {
+  font-size: 1.2rem;
+}
+
 .post-header-wrapper .content-container {
   max-width: var(--content-width);
   margin: 0 auto;
