@@ -57,7 +57,7 @@ I dumped it all into a CSV and started looking for patterns.
 
 ## The Full Picture
 
-Here's every fortnightly sprint since joining the company in March 2023. Story points, stories closed, and bugs closed all in one view:
+Here's every fortnightly sprint since joining the company in March 2023. Story points (light blue), stories closed (dark blue), and bugs closed (red) all in one view:
 
 <div class="chart-container"><canvas id="fullChart" style="max-width:100%; height:400px;"></canvas>
 <script>
@@ -111,24 +111,22 @@ And I'm hoping to make the numbers go up, more!
 
 ## Zooming In: The AI Effect
 
-Now let's zoom into just 2024 onwards and mark when AI entered the picture:
+Now let's zoom into 2025 onwards and mark when AI entered the picture:
 
 <div class="chart-container"><canvas id="zoomChart" style="max-width:100%; height:400px;"></canvas>
 <script>
 (function() {
-  var labels = ["Jan 24","","Jan 24","","Feb 24","","Mar 24","","Apr 24","","May 24","","Jun 24","","Jul 24","","Aug 24","","Sep 24","","Oct 24","","Nov 24","","Dec 24","","Dec 24","","Jan 25","","Feb 25","","Mar 25","","Apr 25","","May 25","","Jun 25","","Jul 25","","Aug 25","","Sep 25","","Oct 25","","Nov 25","","Dec 25","","Dec 25","","Jan 26","","Feb 26"];
-  var points = [3,8,16,21,3,13,0,0,0,0,13,5,5,0,8,0,8,7,17,9,0,20,8,13,0,8,0,0,0,0,8,5,13,0,8,10,3,28,0,0,8,0,41,0,0,13,8,0,5,5,2,0,0,14,8,0,0];
-  var stories = [1,1,2,4,1,2,0,0,0,0,2,1,1,0,1,0,2,2,4,3,0,1,1,1,0,1,0,0,0,0,1,1,1,0,1,2,1,2,0,0,1,0,3,0,0,2,2,0,1,1,1,0,0,3,2,0,0];
-  var bugs = [0,0,0,2,0,2,2,0,2,0,0,3,1,2,1,1,0,3,2,3,0,0,0,1,0,0,3,8,2,1,2,4,3,2,0,0,1,0,5,1,4,0,0,1,2,1,1,4,4,6,1,0,1,2,1,0,0];
-  var sma = [null,null,null,12.0,12.0,13.2,9.2,4.0,3.2,0.0,3.2,4.5,5.8,5.8,4.5,3.2,4.0,5.8,8.0,10.2,8.2,11.5,9.2,10.2,10.2,7.2,5.2,2.0,2.0,0.0,2.0,3.2,6.5,6.5,6.5,7.8,5.2,12.2,10.2,7.8,9.0,2.0,12.2,12.2,10.2,13.5,5.2,5.2,6.5,4.5,3.0,3.0,1.8,4.0,5.5,5.5,5.5];
+  var labels = ["Jan 25","","Feb 25","","Mar 25","","Apr 25","","May 25","","Jun 25","","Jul 25","","Aug 25","","Sep 25","","Oct 25","","Nov 25","","Dec 25","","Dec 25","","Jan 26","","Feb 26"];
+  var points = [0,0,8,5,13,0,8,10,3,28,0,0,8,0,41,0,0,13,8,0,5,5,2,0,0,14,8,0,0];
+  var tickets = [2,1,3,5,4,2,1,2,2,2,5,1,5,0,3,1,2,3,3,4,5,7,2,0,1,5,3,0,0];
+  var sma = [2.0,0.0,2.0,3.2,6.5,6.5,6.5,7.8,5.2,12.2,10.2,7.8,9.0,2.0,12.2,12.2,10.2,13.5,5.2,5.2,6.5,4.5,3.0,3.0,1.8,4.0,5.5,5.5,5.5];
   new Chart(document.getElementById('zoomChart'), {
     type: 'bar',
     data: {
       labels: labels,
       datasets: [
-        { label: 'Story Points', data: points, backgroundColor: 'rgba(125,211,252,0.5)', borderColor: 'rgba(125,211,252,1)', borderWidth: 1, order: 4 },
-        { label: 'Stories Closed', data: stories, backgroundColor: 'rgba(30,64,175,0.7)', borderColor: 'rgba(30,64,175,1)', borderWidth: 1, order: 3 },
-        { label: 'Bugs Closed', data: bugs, backgroundColor: 'rgba(239,68,68,0.5)', borderColor: 'rgba(239,68,68,1)', borderWidth: 1, order: 2 },
+        { label: 'Story Points', data: points, backgroundColor: 'rgba(125,211,252,0.5)', borderColor: 'rgba(125,211,252,1)', borderWidth: 1, order: 3 },
+        { label: 'Tickets Closed', data: tickets, backgroundColor: 'rgba(147,51,234,0.6)', borderColor: 'rgba(147,51,234,1)', borderWidth: 1, order: 2 },
         { label: 'Points SMA (8wk)', data: sma, type: 'line', borderColor: 'rgba(74,222,128,0.8)', borderWidth: 2, pointRadius: 0, fill: false, tension: 0.3, order: 1 }
       ]
     },
@@ -143,12 +141,10 @@ Now let's zoom into just 2024 onwards and mark when AI entered the picture:
         legend: { labels: { color: '#ccc' } },
         annotation: {
           annotations: {
-            summer24: { type: 'box', xMin: 14, xMax: 16, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas24: { type: 'box', xMin: 25, xMax: 26, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
-            summer25: { type: 'box', xMin: 40, xMax: 42, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
-            xmas25: { type: 'box', xMin: 51, xMax: 52, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
-            aiExplore: { type: 'line', xMin: 43, xMax: 43, borderColor: 'rgba(255,180,50,0.6)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Experimenting', color: '#ffb432', backgroundColor: 'transparent', position: 'start', font: {size: 10} }},
-            aiSerious: { type: 'line', xMin: 52, xMax: 52, borderColor: 'rgba(255,80,80,0.7)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Serious', color: '#ff5050', backgroundColor: 'transparent', position: 'start' }}
+            summer25: { type: 'box', xMin: 12, xMax: 14, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🏖️', position: 'start' }},
+            xmas25: { type: 'box', xMin: 23, xMax: 24, backgroundColor: 'rgba(100,150,255,0.15)', borderWidth: 0, label: { display: true, content: '🎄', position: 'start' }},
+            aiExplore: { type: 'line', xMin: 15, xMax: 15, borderColor: 'rgba(255,180,50,0.6)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Experimenting', color: '#ffb432', backgroundColor: 'transparent', position: 'start', font: {size: 10} }},
+            aiSerious: { type: 'line', xMin: 24, xMax: 24, borderColor: 'rgba(255,80,80,0.7)', borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'AI Serious', color: '#ff5050', backgroundColor: 'transparent', position: 'start' }}
           }
         }
       }
@@ -166,7 +162,7 @@ It's messy. Real data always is. But a few things stand out:
 1. **The August 2025 spike** (41 story points in one sprint). That wasn't AI, just a really good month. It's an outlier, not a trend.
 2. **The SMA tells a better story.** Ignore the individual bars. The 8-week moving average shows the real trend, smoothing out the noise of individual sprints.
 3. **Holiday dips are predictable.** Every summer and Christmas shows the expected trough. Useful for knowing when to *not* panic about low numbers.
-4. **Bugs tell their own story.** The purple bars show unpointed bugs which the story points metric misses entirely. Looking at all three together gives a fuller picture.
+4. **Tickets tell a fuller story.** The purple bars combine stories and bugs into total tickets closed. Story points miss unpointed bugs entirely, so looking at both together gives a more honest picture.
 
 A steady rhythm through 2024, then things start shifting in late 2025 as AI tools entered the workflow. Now we watch for what happens next.
 
