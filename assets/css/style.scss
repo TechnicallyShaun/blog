@@ -408,6 +408,35 @@ blockquote {
   font-style: italic;
 }
 
+.callout {
+  border-left: 4px solid var(--accent-primary);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.callout h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--accent-primary);
+}
+
+.callout p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.callout.amber {
+  border-left-color: #f5a623;
+}
+
+.callout.amber h4 {
+  color: #f5a623;
+}
+
 .page-content {
   flex: 1;
   padding: 4rem 0;
