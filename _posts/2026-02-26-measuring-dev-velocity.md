@@ -59,7 +59,6 @@ I dumped it all into a CSV and started looking for patterns.
 Here's what three years of 2 week sprints looks like, measured in story points delivered:
 
 <div class="chart-container"><canvas id="pointsChart" style="max-width:100%; height:400px;"></canvas>
-
 <script>
 (function() {
   const labels = ["Mar 23","","Apr 23","","May 23","","Jun 23","","Jul 23","","","Aug 23","Sep 23","","","Oct 23","","Nov 23","","Dec 23","","Jan 24","","","Feb 24","","Mar 24","","Apr 24","","","May 24","Jun 24","","Jul 24","","","Aug 24","","Sep 24","","Oct 24","","Nov 24","","Dec 24","","","Jan 25","","Feb 25","","Mar 25","","Apr 25","","May 25","","Jun 25","","","Jul 25","","Aug 25","","Sep 25","","Oct 25","","Nov 25","","Dec 25","","Jan 26","","Feb 26"];
@@ -139,7 +138,6 @@ And I'm hoping to make the numbers go up, more!
 Story points only tell part of the story. Here's raw ticket throughput, every story, bug, and task:
 
 <div class="chart-container"><canvas id="ticketsChart" style="max-width:100%; height:400px;"></canvas>
-
 <script>
 (function() {
   const labels = ["Mar 23","","Apr 23","","May 23","","Jun 23","","Jul 23","","","Aug 23","Sep 23","","","Oct 23","","Nov 23","","Dec 23","","Jan 24","","","Feb 24","","Mar 24","","Apr 24","","","May 24","Jun 24","","Jul 24","","","Aug 24","","Sep 24","","Oct 24","","Nov 24","","Dec 24","","","Jan 25","","Feb 25","","Mar 25","","Apr 25","","May 25","","Jun 25","","","Jul 25","","Aug 25","","Sep 25","","Oct 25","","Nov 25","","Dec 25","","Jan 26","","Feb 26"];
@@ -205,6 +203,7 @@ Story points only tell part of the story. Here's raw ticket throughput, every st
   });
 })();
 </script>
+</div>
 
 Different pattern here. Ticket count stayed relatively consistent through 2024, then you can see the uptick in late 2025, more tickets being closed per sprint, even if individually they're smaller.
 
