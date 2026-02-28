@@ -408,6 +408,15 @@ blockquote {
   font-style: italic;
 }
 
+.post-content ul,
+.post-content ol {
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+}
+
 .callout {
   border-left: 4px solid var(--accent-primary);
   background: var(--bg-secondary);
@@ -435,6 +444,13 @@ blockquote {
 
 .callout.amber h4 {
   color: #f5a623;
+}
+
+.chart-container {
+  margin: 2rem 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .page-content {

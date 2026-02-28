@@ -11,7 +11,7 @@ excerpt: "Everyone claims AI makes them faster. I wanted proof. So I scraped thr
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
 
-In my [last post](/moment-ai-clicked), I talked about the moment AI stopped being a novelty and became something I could actually build with. Leading up to Christmas, vibe coding away, three things hit me: 
+In my [last post](/blog/2026/02/24/moment-ai-clicked/), I talked about the moment AI stopped being a novelty and became something I could actually build with. Leading up to Christmas, vibe coding away, three things hit me: 
 - First, I *felt* faster. My workflow had shifted from focusing on a single problem to prompting in one window, reviewing output in another, and knowing I could spin up a third. 
 - Second, I could *see* the potential. Even in those early weeks I could tell this method had room to grow. 
 - And third, I was having more fun coding than I'd had in years.
@@ -37,15 +37,16 @@ Future posts in this series will add more dimensions: cycle time distributions, 
 
 Stats like these aren't readily available in our system. And it's not something I'm going to ask the boss for, you know, just in case it shows I've been coasting for three years.
 
-So I went and got them myself, using the MCP I'd built (from the [previous post](/moment-ai-clicked)). I scraped our ticketing system and paired it with git history. For every ticket I'd worked on since joining the company in early 2023, I pulled:
+So I went and got them myself, using the MCP I'd built (from the [previous post](/blog/2026/02/24/moment-ai-clicked/)). I scraped our ticketing system and paired it with git history. For every ticket I'd worked on since joining the company in early 2023, I pulled:
 
 - Ticket number and type (story vs bug)
 - Story points (where assigned)
 - Start and completion dates
 
 <div class="callout">
-<h4>🧠 Something Meta</h4>
-<p>The AI built the MCP tool that fetches ticket information. The AI also built the data scraper that cross-references the git graph for ticket numbers and enriches it with that ticket data. There was very little raw effort from me in building either of those tools. So we have AI building the instruments that measure AI's own impact. That's recursive, and worth noting.</p>
+<h4>🧠 Zero Effort Analysis</h4>
+<p>The AI built the MCP tool that fetches ticket information. The AI also built the data scraper that cross-references the git graph for ticket numbers and enriches it with that ticket data. There was very little raw effort from me in building either of those tools.</p>
+<p>So we have AI building the instruments that measure AI's own impact. That's recursive, and worth noting.</p>
 </div>
 
 That gave me over **170 tickets across nearly three years**, nearly 70 stories and around 100 bugs (not all mine!) - Rookie numbers. We need to get them up.
@@ -57,7 +58,7 @@ I dumped it all into a CSV and started looking for patterns.
 
 Here's what three years of 2 week sprints looks like, measured in story points delivered:
 
-<canvas id="pointsChart" style="max-width:100%; height:400px;"></canvas>
+<div class="chart-container"><canvas id="pointsChart" style="max-width:100%; height:400px;"></canvas>
 
 <script>
 (function() {
@@ -123,7 +124,7 @@ Here's what three years of 2 week sprints looks like, measured in story points d
     }
   });
 })();
-</script>
+</script></div>
 
 The blue-shaded zones are annual leave. The amber dashed line marks when I started experimenting with AI at work (around September 2025), and the red line is when I got serious about it (January 2026).
 
@@ -137,7 +138,7 @@ And I'm hoping to make the numbers go up, more!
 
 Story points only tell part of the story. Here's raw ticket throughput, every story, bug, and task:
 
-<canvas id="ticketsChart" style="max-width:100%; height:400px;"></canvas>
+<div class="chart-container"><canvas id="ticketsChart" style="max-width:100%; height:400px;"></canvas>
 
 <script>
 (function() {
@@ -245,4 +246,4 @@ Am I a 10x developer?
 
 Not yet. But I'm working on it.
 
-*This is part of the [Using AI to Become a 10x Developer](/tags#series) series.*
+*This is part of the [Using AI to Become a 10x Developer](/blog/2026/02/24/moment-ai-clicked/) series.*
