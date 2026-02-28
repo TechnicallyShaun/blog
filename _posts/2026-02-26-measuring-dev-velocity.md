@@ -45,8 +45,9 @@ So I went and got them myself, using the MCP I'd built (from the [previous post]
 
 <div class="callout">
 <h4>🧠 Zero Effort Analysis</h4>
-<p>The AI built the MCP tool that fetches ticket information. The AI also built the data scraper that cross-references the git graph for ticket numbers and enriches it with that ticket data. There was very little raw effort from me in building either of those tools.</p>
-<p>So we have AI building the instruments that measure AI's own impact. That's recursive, and worth noting.</p>
+<p>AI built the MCP tool that fetches ticket information. AI also built the data scraper that cross-references the git graph for ticket numbers and enriches it with that ticket data. There was very little raw effort from me in building either of those tools.</p>
+<p>So we have AI building the instruments that measure AI's own impact. </p>
+<p>Recursive, and worth noting.</p>
 </div>
 
 That gave me over **170 tickets across nearly three years**, nearly 70 stories and around 100 bugs (not all mine!) - Rookie numbers. We need to get them up.
