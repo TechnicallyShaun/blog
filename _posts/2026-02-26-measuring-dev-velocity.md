@@ -50,7 +50,7 @@ So I went and got them myself, using the MCP I'd built (from the [previous post]
 <p>Recursive, and worth noting.</p>
 </div>
 
-That gave me over **170 tickets across nearly three years**, nearly 70 stories and around 100 bugs (not all mine!) - Rookie numbers. We need to get them up.
+That gave me over **170 tickets across nearly three years**, around 100 bugs (not all mine!) and nearly 70 stories and  - Rookie numbers. We need to get them up.
 ![Rookie numbers](/assets/images/2026-02-26-measuring-dev-velocity/rookie-numbers.png)
 
 I dumped it all into a CSV and started looking for patterns.
@@ -178,18 +178,18 @@ What I *can* say: the baseline from mid-2024 through mid-2025 averaged about **6
 
 <div class="callout amber">
 <h4>💰 The Adoption Tax</h4>
-<p>Some of the time I'd normally spend developing, I'm now spending figuring out how to improve my velocity. There's wasted energy there. If my output still matches the baseline <em>while</em> I'm investing time in learning new tools, that's already a quiet win. I'm hoping the real gains come as the learning curve flattens.</p>
+<p>Some of the time I'd normally spend developing, I'm now spending figuring out how to improve my velocity. There's spent energy there. If my output still matches the baseline <em>while</em> I'm investing time in learning new tools, that's already a quiet win. I'm hoping the real gains come as the learning curve flattens.</p>
 </div>
 
 ## This is my baseline
 
 Future improvements in this series can reference back to these charts now. When I build a new tool, automate a new workflow, or try a new approach, I'll have numbers to compare against.
 
-Coding feels faster, I can see the potential and it's genuinely fun too! But I need to get down to the stats and to the evidence. Especially now, while every YouTuber and X post is hyping how we'll all be out of jobs by the end of the year. 
+Coding feels faster, I can see the potential and it's genuinely fun too! 
 
-I need something real to help answer the question:
+Getting down to the stats - *especially right now, while every YouTuber and X post is hyping how we'll all be out of jobs by the end of the year* - will inject a bit of reality, to help answer the question:
 
-Am I a 10x developer? 
+Is AI helping me become a 10x developer? 
 
 Not yet. But I'm working on it.
 
