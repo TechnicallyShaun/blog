@@ -472,7 +472,6 @@ blockquote {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
   padding: 3rem 0 2rem;
-  transition: padding 0.2s ease-out;
 }
 
 .post-header-wrapper.shrunk {
@@ -497,7 +496,6 @@ blockquote {
 .post-title {
   margin-top: 0;
   margin-bottom: 1rem;
-  transition: font-size 0.2s ease-out;
 }
 
 .post-meta {
