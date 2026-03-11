@@ -28,21 +28,6 @@ layout: default
         {{ content }}
       </div>
       
-      {%- if page.tags.size > 0 -%}
-      <div class="post-tags-section">
-        <h3 class="post-tags-heading">Tags</h3>
-        <div class="post-tags-container">
-          {%- for tag in page.tags -%}
-          <span class="post-tag">
-            #{{ tag }}
-          </span>
-          {%- endfor -%}
-        </div>
-      </div>
-      {%- endif -%}
-      
-      {% include giscus.html %}
-
       <nav class="post-navigation">
         {%- if page.previous -%}
         <a href="{{ page.previous.url | relative_url }}" class="post-nav-link post-nav-link-start">
@@ -62,6 +47,21 @@ layout: default
         <div></div>
         {%- endif -%}
       </nav>
+
+      {%- if page.tags.size > 0 -%}
+      <div class="post-tags-section">
+        <h3 class="post-tags-heading">Tags</h3>
+        <div class="post-tags-container">
+          {%- for tag in page.tags -%}
+          <span class="post-tag">
+            #{{ tag }}
+          </span>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- endif -%}
+
+      {% include giscus.html %}
     </div>
   </div>
 </article>
