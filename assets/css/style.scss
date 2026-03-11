@@ -472,14 +472,14 @@ blockquote {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
   padding: 3rem 0 2rem;
+  position: sticky;
+  top: 0; /* JS overrides this to sit below the site nav */
+  z-index: 90;
+  transition: none; /* no CSS transitions — size is driven 1:1 by scroll position */
 }
 
-.post-header-wrapper.shrunk {
-  padding: 1.5rem 0 1rem;
-}
-
-.post-header-wrapper.shrunk .post-title {
-  font-size: 1.2rem;
+.post-header-wrapper .post-title {
+  transition: none; /* prevent any inherited transition from fighting inline styles */
 }
 
 .post-header-wrapper .content-container {
