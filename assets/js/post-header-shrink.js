@@ -1,7 +1,13 @@
 /**
- * Post Header Shrink — continuous scroll proxy version
- * Maps scroll position directly to font size and padding,
- * eliminating the flicker that occurs with binary class toggling.
+ * Post Header Shrink — sticky continuous-scroll proxy version
+ *
+ * The wrapper is position:sticky so the browser fixes its on-screen position.
+ * We only ever change the wrapper's size (padding + title font-size), and the
+ * size is derived 100% from window.scrollY via a clamped linear interpolation.
+ * Nothing else can change the size, so there is no flicker.
+ *
+ * We also keep the sticky `top` offset in sync with the site nav height so the
+ * post header always stacks neatly below the global navigation bar.
  */
 (function() {
   const SCROLL_START = 50;  // px – shrink begins
@@ -14,8 +20,9 @@
 
   const MIN_FONT_REM = 1.2; // rem (matches .shrunk .post-title CSS)
 
-  const wrapper = document.querySelector('.post-header-wrapper');
-  const title   = document.querySelector('.post-title');
+  const siteNavEl = document.querySelector('header');
+  const wrapper   = document.querySelector('.post-header-wrapper');
+  const title     = document.querySelector('.post-title');
   if (!wrapper || !title) return;
 
   // Capture the rendered font size before any JS manipulation.
@@ -26,7 +33,13 @@
   function lerp(a, b, t) { return a + (b - a) * t; }
   function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
 
-  var rafPending = false;
+  /** Keep the sticky `top` value equal to the current nav bar height. */
+  function syncStickyTop() {
+    wrapper.style.top = siteNavEl ? siteNavEl.offsetHeight + 'px' : '0px';
+  }
+
+  var rafPending    = false;
+  var resizeTimer   = null;
 
   function applyStyles() {
     rafPending = false;
@@ -45,5 +58,13 @@
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  applyStyles(); // set correct initial state
+  // Debounced resize handler — re-measures nav height without causing
+  // layout thrashing on every pixel of resize.
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncStickyTop, 100);
+  }, { passive: true });
+
+  syncStickyTop();   // position sticky bar below nav
+  applyStyles();     // set correct initial size
 })();
