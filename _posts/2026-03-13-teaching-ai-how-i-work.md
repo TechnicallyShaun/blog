@@ -40,7 +40,9 @@ Nobody can vibe code a replacement for systems that have been running for 30 yea
 
 Chipping away bit by bit. That's exactly what formalising your process looks like. Document what you do, introduce it to the AI gradually, and refine as you go.
 
-{% include callout.html type="info" content="This is where most developers stall. Not because they can't do it, but because it feels like overhead. Writing down what you already know feels redundant, until you realise the AI doesn't know any of it." %}
+<div class="callout">
+<p>This is where most developers stall. Not because they can't do it, but because it feels like overhead. Writing down what you already know feels redundant, until you realise the AI doesn't know any of it.</p>
+</div>
 
 For me, that looks something like this:
 
@@ -79,7 +81,10 @@ I already had prompt documents that any AI could follow. But baked-in skills nee
 
 Portability matters more than you think. If Claude falls off the way ChatGPT did for me, you're still mobile. Plug in another compiler. Try across them easily.
 
-{% include callout.html type="tip" title="Enterprise stealth deployment" content="I created a global gitignore to hide these files so they don't get in the way of anybody else's AI use. I can maintain my own personal AI configuration until I've proven some benefit. Stealth deployment. No committee required." %}
+<div class="callout amber">
+<h4>Enterprise stealth deployment</h4>
+<p>I created a global gitignore to hide these files so they don't get in the way of anybody else's AI use. I can maintain my own personal AI configuration until I've proven some benefit. Stealth deployment. No committee required.</p>
+</div>
 
 ## SDP: The Organiser
 
