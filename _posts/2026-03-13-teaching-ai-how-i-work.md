@@ -8,10 +8,6 @@ author: Shaun Smith
 excerpt: "Everyone's showing AI on greenfield projects. Nobody's showing the messy reality of brownfield. Here's how I formalised my process and taught AI to follow it."
 ---
 
-*Part 3 of [Using AI to Become a 10x Developer](/series/using-ai-to-become-a-10x-developer). Previously: [The Moment AI Clicked For Me](/blog/2026/02/24/moment-ai-clicked/) and [How Do You Measure a 10x Developer?](/blog/2026/02/26/measuring-dev-velocity/)*
-
----
-
 I started where most developers start with AI. One terminal, one AI, and the potential hiding behind that black and white. I was trying different approaches, different tools, seeing how much of the hype I could actually realise. One of the first things I started doing was saving my prompts. As I used them, I'd write them down in markdown files, particularly the ones I noticed using over and over. I'd started using voice typing too (WIN + H), which sped up non-routine requests.
 
 Along the way, I started picking up on quirks. Things I didn't expect. The AI would nail something complex, then butcher something simple. It would confidently rewrite a file I didn't ask it to touch. It would solve a problem three different ways across three attempts, all valid, but fell short in some way. The more I used it, the more I realised the tool wasn't the problem. It was how I was pointing it.
@@ -117,3 +113,7 @@ I've been tracking every story now in realtime since January. Looking at the bro
 And while right now, I might not be a 10x developer.
 
 It's starting to look promising.
+
+---
+
+*This is part of the [Using AI to Become a 10x Developer](/blog/2026/02/24/moment-ai-clicked/) series. Previously: [The Moment AI Clicked For Me](/blog/2026/02/24/moment-ai-clicked/) and [How Do You Measure a 10x Developer?](/blog/2026/02/26/measuring-dev-velocity/)*
