@@ -475,11 +475,30 @@ blockquote {
   position: sticky;
   top: 0; /* JS overrides this to sit below the site nav */
   z-index: 90;
-  transition: none; /* no CSS transitions — size is driven 1:1 by scroll position */
+  transition: padding 0.18s ease;
 }
 
 .post-header-wrapper .post-title {
-  transition: none; /* prevent any inherited transition from fighting inline styles */
+  font-size: 2.5rem;
+  transition: font-size 0.18s ease;
+}
+
+.post-header-wrapper[data-header-size="mid"] {
+  padding-top: 2.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.post-header-wrapper[data-header-size="mid"] .post-title {
+  font-size: 1.75rem;
+}
+
+.post-header-wrapper[data-header-size="compact"] {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.post-header-wrapper[data-header-size="compact"] .post-title {
+  font-size: 1.2rem;
 }
 
 .post-header-wrapper .content-container {
