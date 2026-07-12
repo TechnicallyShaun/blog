@@ -8,32 +8,33 @@ permalink: /blog/
   <header class="page-header-wrapper">
     <div class="container">
       <div class="content-container">
-        <h1>Blog</h1>
-        <p class="page-description">Real implementations, production code, and lessons learned building autonomous systems.</p>
+        <p class="notebook-kicker">A personal notebook</p>
+        <h1>Making technology feel a little more human.</h1>
+        <p class="page-description">Notes on intelligent systems, thoughtful tools, and the work between them.</p>
       </div>
     </div>
   </header>
-  
+
   <div class="container">
     <div class="content-container">
       <div class="posts-list">
         {% for post in site.posts %}
         <article class="post-preview">
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-          {% if post.categories %}
-          <div class="categories">
-            {% for category in post.categories %}
-            <span class="category">{{ category }}</span>
-            {% endfor %}
+          <div class="post-preview-copy">
+            <div class="post-preview-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+              <span>·</span>
+              <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+            </div>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+            <a href="{{ post.url | relative_url }}" class="read-more">Keep reading <span aria-hidden="true">↗</span></a>
           </div>
-          {% endif %}
-          <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
-          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          <div class="post-preview-mark" aria-hidden="true"></div>
         </article>
         {% endfor %}
       </div>
-      
+
       {% if site.posts.size == 0 %}
       <p class="no-posts">No posts yet. Check back soon!</p>
       {% endif %}
