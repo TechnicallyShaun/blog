@@ -1160,3 +1160,42 @@ a { color: var(--notebook-accent); }
   nav ul { gap: .8rem; }
   nav a { font-size: .85rem; }
 }
+
+/* Home imagery tuned to the personal notebook direction */
+.personal-notebook-hero {
+  min-height: 520px;
+  padding: 7rem 0;
+  text-align: left;
+  justify-content: flex-start;
+  background-position: center;
+  border-bottom-color: var(--notebook-line);
+}
+
+[data-theme="light"] .personal-notebook-hero {
+  background-image: url('/assets/images/hero-technical-light.png');
+}
+
+[data-theme="dark"] .personal-notebook-hero {
+  background-image: url('/assets/images/hero-technical-dark.png');
+}
+
+[data-theme="light"] .personal-notebook-hero .hero-overlay {
+  background: linear-gradient(90deg, rgba(255, 248, 241, .96) 0%, rgba(255, 248, 241, .82) 42%, rgba(255, 248, 241, .18) 100%);
+}
+
+[data-theme="dark"] .personal-notebook-hero .hero-overlay {
+  background: linear-gradient(90deg, rgba(23, 27, 32, .95) 0%, rgba(23, 27, 32, .84) 40%, rgba(23, 27, 32, .2) 100%);
+}
+
+.personal-notebook-hero .hero-content { max-width: 600px; }
+.personal-notebook-hero h1 { max-width: 560px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(3rem, 7vw, 5.75rem); font-weight: 400; line-height: .98; letter-spacing: -.06em; background: none; color: var(--notebook-ink); -webkit-text-fill-color: currentColor; }
+.personal-notebook-hero .tagline { max-width: 460px; color: var(--notebook-muted); font-size: 1.1rem; line-height: 1.6; margin-left: 0; }
+.personal-notebook-hero .btn { background: var(--notebook-accent); color: #fff8f1; border-radius: 999px; }
+.featured-section { margin-top: 5rem; }
+.featured-section > h2, .section-heading-centered { font-family: Georgia, 'Times New Roman', serif; font-size: 2.3rem; font-weight: 400; letter-spacing: -.04em; }
+.tech-grid { gap: 1rem; }
+.tech-item { background: var(--notebook-surface); border: 1px solid var(--notebook-line); border-radius: 12px; padding: 1.5rem; }
+.tech-item:hover { border-color: var(--notebook-accent); transform: translateY(-3px); }
+.tech-icon { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--notebook-mark); color: var(--notebook-ink); font-family: var(--font-mono); font-size: .75rem; margin-bottom: 1rem; }
+.tech-item h3 { color: var(--notebook-ink); font-family: Georgia, 'Times New Roman', serif; font-size: 1.35rem; font-weight: 400; }
+.tech-item p { color: var(--notebook-muted); }
