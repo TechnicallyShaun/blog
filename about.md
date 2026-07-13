@@ -9,7 +9,7 @@ description: "A developer exploring AI agents, automation, infrastructure, and t
 
 I'm trying to use technology with my new found love of AI to automate and augment the boring stuff in life.
 
-Currently building what I call **The Self-Driving Vault** - basically trying to get AI agents to organize my Obsidian notes so I don't have to. Everyone's got a messy vault. Everyone wants AI to fix it. I'm the guy actually attempting it and documenting the chaos.
+Currently building what I call **Life OS** - basically trying to get AI agents to organize my Obsidian notes so I don't have to. Everyone's got a messy vault. Everyone wants AI to fix it. I'm the guy actually attempting it and documenting the chaos.
 
 The dream? A second brain that actually thinks, so I don't have to use my own.
 The reality? Mostly debugging why Claude keeps putting grocery lists in my project folders.
