@@ -2,9 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+description: "A developer exploring AI agents, automation, infrastructure, and the systems that make technology useful."
 ---
-
-# About
 
 ## The Current Obsession
 

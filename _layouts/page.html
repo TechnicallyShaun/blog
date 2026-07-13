@@ -2,16 +2,24 @@
 layout: default
 ---
 
-<div class="container">
-  <article class="about-content">
-    {%- if page.title -%}
-    <header class="about-header">
-      <h1>{{ page.title | escape }}</h1>
-    </header>
-    {%- endif -%}
-    
+<article class="about-content">
+  {%- if page.title -%}
+  <header class="page-header-wrapper about-page-header">
+    <div class="container">
+      <div class="content-container">
+        <p class="notebook-kicker">About</p>
+        <h1>{{ page.title | escape }}</h1>
+        {%- if page.description -%}
+        <p class="page-description">{{ page.description }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </header>
+  {%- endif -%}
+
+  <div class="container">
     <div class="content-container post-content">
       {{ content }}
     </div>
-  </article>
-</div>
+  </div>
+</article>
