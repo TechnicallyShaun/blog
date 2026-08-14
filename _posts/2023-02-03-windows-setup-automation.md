@@ -30,7 +30,7 @@ This post aims to explore that problem and potential solutions.
 
 ## How to automate
 
-I'm a Microsoft Windows user, so this guide will focus there. These ideas and general concepts can be applied to other systems though - i.e. bash script on linux?
+I'm a Microsoft Windows user, so this guide will focus there. These ideas and general concepts can be applied to other systems though, i.e. bash script on linux?
 PowerShell is a pre-installed and very useful tool on Windows and that's the tool we'll mostly be using here.
 
 ### 1. Chocolatey for software installation

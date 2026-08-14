@@ -16,7 +16,7 @@ I saw it and thought it was worth looking into. Work was kind enough to gift us 
 
 ![GitHub Copilot](/assets/images/2026-02-24-moment-ai-clicked/copilot-splash.png)
 
-With Copilot Chat baked into Visual Studio 2022, I asked it about our codebase. We have a massive codebase, and the AI just wasn't up to it. I tried some code generation, and for small, isolated things it was okay. The problem was to make it work I'd have to have already found my way into the class, into the method - describing an if statement for it to complete was maybe a little helpful for edge cases, but I wouldn't say miraculous. 
+With Copilot Chat baked into Visual Studio 2022, I asked it about our codebase. We have a massive codebase, and the AI just wasn't up to it. I tried some code generation, and for small, isolated things it was okay. The problem was to make it work I'd have to have already found my way into the class, into the method. Describing an if statement for it to complete was maybe a little helpful for edge cases, but I wouldn't say miraculous. 
 The autocomplete was pretty cool... but when you asked it to write a test? It would delete the entire test suite and replace it with a single stub.
 
 The best way I could describe it? A helpful super Google. It knew your stack, got you to answers quicker than searching 15 results manually, and 95% of the time it would be the answer you needed. But beyond that and autocomplete, I found very little utility.
@@ -60,11 +60,11 @@ My first failure, and I hadn't even got anything done yet.
 
 ## Second Attempt: TypeScript STDIO (The Breakthrough)
 
-A lot of the STDIO MCPs were in Python which I was loathed to try, but I soon discovered using Node you could craft a TypeScript MCP - another language I know well.
+A lot of the STDIO MCPs were in Python which I was loathed to try, but I soon discovered using Node you could craft a TypeScript MCP, another language I know well.
 
 A simple prompt and fifteen minutes later, I had converted the C# MCP into a fully-fledged, very tiny, very fast TypeScript MCP.
 
-A bit fearful of this newfound power of a non-deterministic technical psychopath holding on to my work to-do list; I stripped it down to a simple "get ticket" function. We don't need any infinite loops creating a gazillion tickets overnight - possibly resulting with me getting the sack. 
+A bit fearful of this newfound power of a non-deterministic technical psychopath holding on to my work to-do list; I stripped it down to a simple "get ticket" function. We don't need any infinite loops creating a gazillion tickets overnight, possibly resulting with me getting the sack. 
 It breaks down stories and bugs, retrieves the full context (version, epic, acceptance criteria) and hands it to the AI automatically. No more copy-pasting specs from tickets. That saved me a small amount of time and frustration immediately.
 
 ## When Tools Met AI
